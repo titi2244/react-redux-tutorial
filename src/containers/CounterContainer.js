@@ -6,8 +6,10 @@ import { getRandomColor } from "../utils";
 // store의 값을 Porps로 매핑 해 주는 함수
 const mapStateToProps = (state) => ({
     //
-    color: state.color,
-    number: state.number
+    // color: state.color,
+    // number: state.number
+    color: state.colorData.color,
+    number: state.numberData.number
 });
 
 /*
@@ -24,6 +26,9 @@ const mapDispatchToProps = (dispatch) => ({
         dispatch(actions.setColor(color));
     }
 });
+
+// Counter 컴포넌트의 Container 컴포넌트
+// Counter 컴포넌트를 어플리케이션의 데이터 레이어와 묶는 역할을 합니다.
 
 const CounterContainer = connect(
     mapStateToProps,
