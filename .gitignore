@@ -1,25 +1,49 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+# See https://help.github.com/ignore-files/ for more about ignoring files.
 
 # dependencies
 /node_modules
-/.pnp
-.pnp.js
-
-# testing
-/coverage
 
 # production
 /build
 
 # misc
 .DS_Store
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
 
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-.idea
+[*]
+indent_style = space
+indent_size = 4
+end_of_line = lf
+charset = utf-8
+trim_trailing_whitespace = true
+insert_final_newline = true
+
+
+[*.js]
+indent_size = 2
+
+[*.jsx]
+indent_size = 2
+
+[*.css]
+indent_size = 2
+
+[*.scss]
+indent_size = 2
+
+[*.md]
+trim_trailing_whitespace = false
+
+# IntelliJ Specific
+.idea/
+.idea_modules/
+*.iml
+modules.xml
+*.ipr
+/out/
+
+# mac
+.DS_Store
