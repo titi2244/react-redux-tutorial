@@ -5,17 +5,22 @@ import * as types from './ActionTypes';
     scope 이슈와 관계 없이 편의상 사용되었습니다.
 */
 
-export const increment = () => ({
-    type: types.INCREMENT
+//여러개의 카운터중 어는 것인지 알기 위해 인덱스를 인자로 받아 추가 해 줘야 함.
+
+export const increment = (index) => ({
+    type: types.INCREMENT,
+    index
 });
 
-export const decrement = () => ({
-    type : types.DECREMENT
+export const decrement = (index) => ({
+    type : types.DECREMENT,
+    index
 });
 
 // 다른 액션 생성자들과 달리, 파라미터를 갖고있습니다
-export const setColor = (color) => ({
+export const setColor = (index, color) => ({
     type: types.SET_COLOR,
+    index,
     color
 })
 /*
@@ -24,3 +29,12 @@ export const setColor = (color) => ({
 * 그렇다고 우리가 액션을 RANDOMIZE_COLOR, randomizeColor 이런식으로 만들면 안됩니다.
 * 왜냐구요? 랜덤함수는 실행될때마다 다른 값을 반환하기때문에 순수하지 않거든요.
 * */
+
+export const create = (color) => ({
+    type: types.CREATE,
+    color
+});
+
+export const remove = () => ({
+    type: types.REMOVE
+})
