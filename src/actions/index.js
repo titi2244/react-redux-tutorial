@@ -5,6 +5,8 @@ import * as types from './ActionTypes';
     scope 이슈와 관계 없이 편의상 사용되었습니다.
 */
 
+//여러개의 카운터중 어는 것인지 알기 위해 인덱스를 인자로 받아 추가 해 줘야 함.
+
 export const increment = (index) => ({
     type: types.INCREMENT,
     index
